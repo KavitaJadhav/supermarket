@@ -7,5 +7,11 @@ class ExtraItemsOffer < Offer
     @buy_count = buy_count
     @get_count = get_count
   end
+
+  def discounted_items(quantity)
+    # total /(total_sets) ---> all_sets
+    #  all_sets * free_items per set
+    (quantity / (@buy_count + @get_count)) * @get_count
+  end
 end
 
