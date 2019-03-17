@@ -12,6 +12,10 @@ class OrderItem
     quantity * @item.price
   end
 
+  def discounted_price
+    quantity * @item.price
+  end
+
   def item_name
     @item.name
   end
