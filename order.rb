@@ -22,15 +22,15 @@ class Order
   private
 
   def total_amount
-    @order_items.map {|order_item| order_item.total_price}.sum
+    @total_amount ||= @order_items.map {|order_item| order_item.total_price}.sum
   end
 
   def discounted_amount
-    @order_items.map {|order_item| order_item.discounted_price}.sum
+    @discounted_amount ||= @order_items.map {|order_item| order_item.discounted_price}.sum
   end
 
   def total_savings
-    total_amount - discounted_amount
+    @total_savings ||= total_amount - discounted_amount
   end
 end
 

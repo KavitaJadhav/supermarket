@@ -1,9 +1,9 @@
 class Item
-  attr_accessor :price, :name, :category_id, :unit, :offer
+  attr_accessor :price, :name, :category, :unit, :offer
 
   def initialize(name, price, category, unit, offer)
     @name = name
-    @category_id = category
+    @category = category
     @price = price
     @unit = unit
     @offer = offer
